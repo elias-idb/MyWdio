@@ -2,6 +2,7 @@ const searchActions = require("../pages/search/searchAction");
 const addToCartActions = require("../pages/addToCart/addToCartActions");
 const checkOutActions = require("../pages/checkOut/checkOutActions");
 const utility = require("../Utilities/utility");
+const loginActions = require("../pages/login/loginActions");
 
 //const productName = "Nike react phantom run flyknit 2";
 var productName = "";
@@ -44,4 +45,12 @@ describe("Demo evershop site automation", () => {
         expect(expectedTotalPrice).toEqual(actualSubTotal);
         expect(expectedTotalPrice).toEqual(actualGrandTotal);
     })
+
+    it("Should able to successfully logout", async() => {
+        await loginActions.clickOnprofileIcon();
+        await loginActions.clickOnLogout();
+        await browser.pause(5000);
+       
+        
+    });
 })

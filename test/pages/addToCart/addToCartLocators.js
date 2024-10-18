@@ -10,6 +10,7 @@ class AddToCartLocators{
 
     productSize(num){
         return $(`(//ul[contains(@class, 'variant-option-list')]/li)[${num}]`);
+        //(//ul[contains(@class, 'variant-option-list')]/li/a)[]
     }
 
     get productColor(){
