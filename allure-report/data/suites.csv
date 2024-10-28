@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","0","Should able to successfully login","","Tue Oct 29 02:10:16 BDT 2024","skipped","Tue Oct 29 02:10:16 BDT 2024","","Demo evershop site automation","",""
+"","57580","Should able to successfully search product","","Tue Oct 29 02:05:40 BDT 2024","passed","Tue Oct 29 02:06:38 BDT 2024","","Demo evershop site automation","",""
+"","8504","Should able to successfully register","","Tue Oct 29 02:10:08 BDT 2024","passed","Tue Oct 29 02:10:16 BDT 2024","","Demo evershop site automation","",""
+"","1","Should able to successfully logout","","Tue Oct 29 02:10:16 BDT 2024","skipped","Tue Oct 29 02:10:16 BDT 2024","","Demo evershop site automation","",""
+"","32745","Should able to successfully add in the cart","","Tue Oct 29 02:05:41 BDT 2024","passed","Tue Oct 29 02:06:14 BDT 2024","","Demo evershop site automation","",""
+"","48","Should successfully verify total amount and grand total amount","","Tue Oct 29 02:06:14 BDT 2024","passed","Tue Oct 29 02:06:14 BDT 2024","","Demo evershop site automation","",""

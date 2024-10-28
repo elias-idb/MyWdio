@@ -22,14 +22,14 @@ exports.config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    //specs: [productPurchase],
-    specs: [auth,productPurchase],
+    specs: [auth],
+    //specs: [auth,productPurchase],
     // suites: {
     //     purchase:[[auth, productPurchase]]
     // },
     suites: {
         purchase:[
-            [auth],
+           // [auth],
             [auth, productPurchase]]
     },
     // Patterns to exclude.
@@ -134,6 +134,11 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     // reporters: ['dot'],
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false
+        //disableWebdriverScreenshotsReporting: true,
+    }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
