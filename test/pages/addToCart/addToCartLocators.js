@@ -1,10 +1,16 @@
 class AddToCartLocators{
-    async productFromList(productName){
-        return $(`//a[contains(@href, '182')]/span[contains(text(), '${productName}')]`);
+    productFromList(productName){
+        //return $(`//a[contains(@href, '182')]/span[contains(text(), '${productName}')]`);
+         return $(`//a[contains(@href, '')]/span[contains(text(), '${productName}')]`);
     }
 
-    get productSize(){
-        return $("//a[@href='#' and contains(text(), 'S')]");
+    // get productSize(){
+    //     return $("//a[@href='#' and contains(text(), 'S')]");
+    // }
+
+    productSize(num){
+        return $(`(//ul[contains(@class, 'variant-option-list')]/li)[${num}]`);
+        //(//ul[contains(@class, 'variant-option-list')]/li/a)[]
     }
 
     get productColor(){
