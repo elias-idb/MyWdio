@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio run ./wdio.conf.js",
-    "runPurchase": "wdio run ./wdio.conf.js --suite purchase",
+    "purchase": "wdio run ./wdio.conf.js --suite purchase",
    "getReport": "allure generate allure-results --clean && allure open"
   },
   "keywords": [

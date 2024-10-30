@@ -24,14 +24,14 @@ exports.config = {
     //
     specs: [auth],
     //specs: [auth,productPurchase],
-    // suites: {
-    //     purchase:[[auth, productPurchase]]
-    // },
     suites: {
-        purchase:[
-           // [auth],
-            [auth, productPurchase]]
-    },
+        purchase: [[auth], [productPurchase]],
+      },
+    // suites: {
+    //     purchase:[
+    //        // [auth],
+    //         [auth, productPurchase]]
+    // },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -136,8 +136,8 @@ exports.config = {
     // reporters: ['dot'],
     reporters: [['allure', {
         outputDir: 'allure-results',
-        disableWebdriverStepsReporting: false
-        //disableWebdriverScreenshotsReporting: true,
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false
     }]],
 
     // Options to be passed to Mocha.
@@ -254,6 +254,24 @@ exports.config = {
     afterSuite: async function (suite) {
         await browser.closeWindow();
     },
+
+
+    afterTest: async function (
+        test,
+        context,
+        { error, result, duration, passed, retries }
+      ) {
+        if (error) {
+          const screenshot = await browser.takeScreenshot();
+          allure.addAttachment(
+            "Screenshot",
+            Buffer.from(screenshot, "base64"),
+            "failure/png"
+          );
+        }
+    },
+
+    
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {string} commandName hook command name

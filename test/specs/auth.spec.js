@@ -6,7 +6,7 @@ var email = "";
 var fullName = "";
 var password = "";
 
-describe("Demo evershop site automation", () => {
+describe("Demo evershop site authentication Joruney", () => {
     it("Should able to successfully register", async() => {
         await loginActions.clickOnprofileIcon();
         await signupActions.clickOnCreateAccount();
@@ -21,21 +21,18 @@ describe("Demo evershop site automation", () => {
         
     });
 
-    it.skip("Should able to successfully logout", async() => {
+    it("Should able to successfully logout", async() => {
         await loginActions.clickOnprofileIcon();
         await loginActions.clickOnLogout();
         await browser.pause(5000);
-       
-        
     });
 
-    it.skip("Should able to successfully login", async() => {
+    it("Should able to successfully login", async() => {
         await loginActions.clickOnprofileIcon();
         await browser.pause(5000);
         await loginActions.enterEmail(email);
         await loginActions.enterPassword(password);
-        await loginActions.clickOnSubmitButton();
-        
+        await loginActions.clickOnSubmitButton();      
     });
 
     
